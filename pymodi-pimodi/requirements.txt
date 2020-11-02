@@ -1,0 +1,18 @@
+pyserial
+python-can
+requests
+esptool
+sounddevice
+soundfile
+numpy
+pyUSB
+pillow
+Image
+ipython
+bleak
+adafruit-ampy
+bleak==0.8.0; sys_platform == 'win32'
+bleak==0.8.0; sys_platform == 'darwin'
+pexpect; sys_platform == 'linux'
+tkmacosx; sys_platform == 'darwin'
+
