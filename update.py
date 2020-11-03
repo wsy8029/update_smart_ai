@@ -13,9 +13,9 @@ shutil.copy('./updater.sh', '/usr/src/pi-updater/updater.sh')
 # pymodi 1.0.1 설치를 위한 requirements - pexpect
 
 
-pip3 uninstall pymodi -y
+# pip3 uninstall pymodi -y
 
-python3 setup.py install --user
+# python3 setup.py install --user
 
 
 
