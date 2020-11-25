@@ -1,9 +1,13 @@
 import shutil
 
 
-# 업데이트할 폴더를 삭제 후 복사하는 방식으로 업데이
-shutil.rmtree('/home/pi/workspace/ai-contents-gyro-car/src')
-shutil.copytree('./ai-contents-gyro-car-master/src', '/home/pi/workspace/ai-contents-gyro-car/src')
+# 업데이트할 폴더를 삭제 후 복사하는 방식으로 업데이트
+# shutil.rmtree('/home/pi/workspace/ai-contents-gyro-car/src')
+# shutil.copytree('./ai-contents-gyro-car-master/src', '/home/pi/workspace/ai-contents-gyro-car/src')
+# 위 copytree 방식이 폴더 내 파일들이 0byte로 복사되는 문제가 있어, 개별 파일들을 복사하는 식으로 진행.
+shutil.copy('./ai-contents-gyro-car-master/src/main.ipynb', '/home/pi/workspace/ai-contents-gyro-car/src/main.ipynb')
+shutil.copy('./ai-contents-gyro-car-master/src/gesture_detection.py', '/home/pi/workspace/ai-contents-gyro-car/src/gesture_detection.py')
+shutil.copy('./ai-contents-gyro-car-master/src/gathering_data.py', '/home/pi/workspace/ai-contents-gyro-car/src/gathering_data.py')
 
 
 # 자동 업데이터의 updater.sh 코드를 수정된 updater.sh 코드로 변경
