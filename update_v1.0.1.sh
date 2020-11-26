@@ -1,13 +1,12 @@
 #!/bin/bash
 
-tar xf /home/pi/workspace/update_smart_ai.tar
 echo -ne '###                         (5%)\r'
 sleep 2
 
 # Directory path
 export PWD=${PWD}
-export pexpect=$PWD/pexpect-master
-export pymodi=$PWD/pymodi-pimodi
+export pexpect=$PWD/update_smart_ai/pexpect-master
+export pymodi=$PWD/update_smart_ai/pymodi-pimodi
 
 pushd $pexpect > /dev/null
 python3 setup.py install --user --quiet > /dev/null
@@ -29,7 +28,7 @@ sleep 2
 
 
 sudo rm /usr/src/rpi-daemon-py/_ctrl_fan.py
-sudo cp $PWD/_ctrl_fan.py /usr/src/rpi-daemon-py/
+sudo cp $PWD/update_smart_ai/_ctrl_fan.py /usr/src/rpi-daemon-py/
 echo -ne '#####################       (70%)\r'
 sleep 2
 
